@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Websockets Chat</title>
+	<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="sockjs-0.3.4.js"></script>
+    <script src="stomp.js"></script>
+    <script src="webSocketsChat.js"></script>
+	<style>
+		#response {
+			border: solid #bbb;
+			width: 400px;
+			height: 400px;
+		}
+	</style>
+</head>
+<body>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being enabled. Please enable Javascript and reload this page!</h2></noscript>
+<div>
+    <div>
+        <button id="connect" onclick="connect();">Connect</button>
+        <button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+    </div>
+    <div id="conversationDiv">
+        <label>Nick:</label><input type="text" id="nick" />
+        <p id="response"></p>
+        <input id="message"></input>
+        <button id="sendMessage" onclick="sendMessage();">Send</button>
+    </div>
+</div>
+</body>
+</html>
